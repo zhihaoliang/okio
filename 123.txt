@@ -1,0 +1,2 @@
+write string by utf-8.
+你好
