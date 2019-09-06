@@ -19,6 +19,7 @@ import javax.annotation.Nullable;
 
 /**
  * A segment of a buffer.
+ * 缓冲区的组成单位结果
  *
  * <p>Each segment in a buffer is a circularly-linked list node referencing the following and
  * preceding segments in the buffer.
@@ -33,15 +34,24 @@ import javax.annotation.Nullable;
  * limits, prev, and next references are not shared.
  */
 final class Segment {
-  /** The size of all segments in bytes. */
+  /**
+   * The size of all segments in bytes.
+   * 每一扇区的大小
+   */
   static final int SIZE = 8192;
 
-  /** Segments will be shared when doing so avoids {@code arraycopy()} of this many bytes. */
+  /**
+   * Segments will be shared when doing so avoids {@code arraycopy()} of this many bytes.
+   *
+   */
   static final int SHARE_MINIMUM = 1024;
 
   final byte[] data;
 
-  /** The next byte of application data byte to read in this segment. */
+  /**
+   * The next byte of application data byte to read in this segment.
+   *
+    */
   int pos;
 
   /** The first byte of available data ready to be written to. */

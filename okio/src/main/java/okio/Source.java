@@ -58,12 +58,15 @@ import java.io.IOException;
  * Use {@link Okio#source} to adapt an {@code InputStream} to a source. Use
  * {@link BufferedSource#inputStream} to adapt a source to an {@code
  * InputStream}.
+ *
+ * 文件读入流
  */
 public interface Source extends Closeable {
   /**
    * Removes at least 1, and up to {@code byteCount} bytes from this and appends
    * them to {@code sink}. Returns the number of bytes read, or -1 if this
    * source is exhausted.
+   * 数据读取
    */
   long read(Buffer sink, long byteCount) throws IOException;
 

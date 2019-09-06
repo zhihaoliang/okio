@@ -35,7 +35,9 @@ import org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement;
 
 import static okio.Util.checkOffsetAndCount;
 
-/** Essential APIs for working with Okio. */
+/** Essential APIs for working with Okio.
+ * 通过 OKio把API方法暴露出来
+ * */
 public final class Okio {
   static final Logger logger = Logger.getLogger(Okio.class.getName());
 
